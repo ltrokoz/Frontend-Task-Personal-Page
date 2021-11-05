@@ -15,9 +15,14 @@
 
 ![image](https://user-images.githubusercontent.com/65572536/140499743-0f78b32e-0e79-4682-adc5-eac30cd4ebff.png)
 
-Test task About Me web page creation. 
+Test task About Me web page creation (HTML/CSS/JS). 
 
 My solution includes changing dark/light mode, responsive design, and fetching data from API.
+
+HOW TO RUN CODE?
+
+Download the folder and in the terminal enter "npm rum dev" and press Enter. Open the browser and enter the next localhost URL: "http://localhost:4000/".
+Top right of the home page there is a sun icon that changes mode from light to dark. Currency exchange rate is updated from the API every 5 seconds. Clock displays the current local time with the current time zone on the dial.
 
 ![solution](https://user-images.githubusercontent.com/65572536/140498979-c3f8ae0e-ec69-4e9b-b65b-7979f6645ab3.png)
 ![image](https://user-images.githubusercontent.com/65572536/140501123-3b506af2-0879-4759-a48d-3c656fa1818b.png)
