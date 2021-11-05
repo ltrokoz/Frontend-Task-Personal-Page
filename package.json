@@ -1,0 +1,15 @@
+{
+  "name": "uuid4",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "LTrokoz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

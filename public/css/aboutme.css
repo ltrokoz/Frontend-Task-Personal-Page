@@ -1,0 +1,300 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  
+  /*========== Colors ==========*/
+  --title-color: #0B0A0A;
+  --text-color: #403A3A;
+  --container-color: #FAFAFA;
+  --container-color-alt: #F0EFEF;
+  --body-color: #FCFCFC;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .875rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1.5rem;
+}
+
+/*========== BASE ==========*/
+*,::before,::after
+{
+  box-sizing: border-box;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+/*========== Variables Dark theme ==========*/
+body.dark-theme
+{
+  --title-color: #F2F2F2;
+  --text-color: #BFBFBF;
+  --container-color: #212121;
+  --container-color-alt: #221f1f;
+  --body-color: #2B2B2B;
+}
+/*========== Button Dark/Light ==========*/
+.change-theme
+{
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  display: flex;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+img.change-theme
+{
+    width: 20px;
+    height: 20px;
+}
+
+/*========== Body ==========*/
+body
+{
+  margin: 0 0 var(--header-height) 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+h1,h2
+{
+  margin: 0;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+p
+{
+  margin: 0;
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+}
+a
+{
+  text-decoration: none;
+  color: var(--text-color);
+  margin: auto;
+}
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+img.icon
+{
+    width: 30px;
+    height: 30px;
+}
+.info 
+{   
+    width: auto;
+}
+th 
+{
+    text-align: right;
+    margin: auto;
+}
+td 
+{
+    text-align: left;
+    padding: 8px;
+    margin: auto;
+}
+.section
+{
+  padding: 1.5rem 0;
+}
+.title
+{
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: .35rem;
+  text-align: center;
+  margin-bottom: var(--mb-2);
+}
+.bd-container
+{
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+.bd-grid
+{
+  display: grid;
+  gap: 1.5rem;
+}
+.home
+{
+  position: relative;
+  gap: 1.5rem;
+}
+.data
+{
+  gap: 1rem;
+  text-align: center;
+  padding: 30px;
+}
+.img
+{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  justify-self: center;
+  margin-bottom: var(--mb-1);  
+  filter: grayscale(100%);
+  border: 5px solid white;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.5);
+  cursor: pointer;
+  transition: .5s;
+  user-select: none;
+}
+.img:hover
+{
+  filter: grayscale(0%);
+  transform: scale(1.5);
+  box-shadow: 3px 3px 20px rgba(0,0,0,.5);
+}
+.name
+{
+  font-size: var(--h1-font-size);
+}
+.description
+{  
+  text-align: justify;
+}
+/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 968px)
+{
+  body
+  {
+    margin: 3rem 0;
+  }
+  .bd-container
+  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about
+  {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--container-color);
+    box-shadow: 0 0 8px rgba(13,12,12,.15);
+  }
+  .about_main
+  {
+    background-color: var(--container-color-alt);
+    padding: 0 1.5rem;
+  }
+}
+/*========== CLOCK ==========*/
+.clock
+{
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/clock.png);
+  background-size: cover;
+  border: 2px solid var(--container-color);
+  border-radius: 50%;
+  box-shadow: 0 -5px 5px rgba(255,255,255,0.05),
+              inset 0 -5px 5px rgba(255,255,255,0.05),
+              0 5px 5px rgba(0,0,0,0.3),
+              inset 0 5px 5px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+.clock p
+{
+    z-index: 100;
+    color: var(--text-color);
+    font-size: 0.75rem;
+    margin-top: 25%;
+    z-index: 1;
+}
+.clock:before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--title-color);
+    border-radius: 50%;
+    z-index: 10000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+    position: absolute;
+}
+.clock .hour, .hr
+{
+    width: 60px;
+    height: 60px;
+}
+.clock .min, .mn
+{
+    width: 80px;
+    height: 80px;
+}
+.clock .sec, .sc
+{
+    width: 85px;
+    height: 85px;
+}
+.hr, .mn, .sc
+{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 10000;
+}
+.hr:before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn:before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: var(--title-color);
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.sc:before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 35px;
+    background: var(--title-color);
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
